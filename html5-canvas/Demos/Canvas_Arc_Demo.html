@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>The HTML5 Canvas: Arc Demo</title>
+	<script src="../libs/jquery-3.1.1.js"></script>
+	
+	<style>
+		canvas { border: 1px solid black; }
+	</style>
+</head>
+<body onload="drawArc()">
+	<p>
+	  <canvas id="myCanvas" width="300" height="300"></canvas>
+	  <label for="arcx"><br>
+	    <br>
+	    <input type="button" name="defaults" id="defaults" value="Defaults" onclick="defaultArc()">
+	    x=75, y=75, radius=35, start angle=0, end angle=Math.PI, counterclockwise=false<br>
+	    <br>
+	    Arc X </label>
+	  <input type="range" min="0" max="300" id="arcx" name="arcx" value="0">
+	  <!--<span id="arcxSpan"></span><br>-->
+	  <label for="arcy">Arc Y</label>
+	  <input type="range" min="0" max="300" id="arcy" name="arcy" value="0">
+	  <!--<span id="arcySpan"></span><br>-->
+	  <label for="radius">Radius </label>
+	  <input type="range" min="0" max="300" id="radius" name="radius" value="0">
+	  <span id="rad"></span><br>
+	  <label for="strtAngle">Start Angle </label>
+	  <input type="range" min="0" max="6.29" id="strtAngle" name="strtAngle" value="0" step="0.01">
+	  <span id="sAng"></span><br>
+	  <label for="endAngle">End Angle </label>
+	  <input type="range" min="0" max="6.29" id="endAngle" name="endAngle" value="0" step="0.01">
+	  <span id="eAng"></span><br>
+	  <label for="antiClock">Anticlockwise </label>
+	  <select id="antiClock" name="antiClock" onChange="setAntiClockwise(this.value)">
+	    <option id="true" value="true" label="true">
+	    <option id="false" value="false" label="false">
+      </select>
+</p>
+	<p>
+	  <label>
+	    <input type="button" name="draw" id="draw" value="Draw Arc" onClick="drawArc()">
+      </label>
+	  <input type="button" name="clear" id="clear" value="Clear Canvas" onClick="clearCanvas()">
+	</p>
+    <script>
+		let vals = {arcx:75,arcy:75,radius:35, strtAngle:0, endAngle:Math.PI, antiClock:false};
+        let canvas = document.getElementById('myCanvas');
+        let context = canvas.getContext('2d');
+		function defaultArc() {
+			//context.clearRect(0, 0, 300, 300);
+			canvas.width = canvas.width;
+			context.arc(75, 75, 35, 0, Math.PI, false);
+			context.stroke();
+		}
+		function setAntiClockwise(val) {
+			vals['antiClock'] = val;	
+			context.clearRect(0, 0, 300, 300);
+			context.beginPath();
+			context.arc(vals['arcx'],vals['arcy'],vals['radius'],vals['strtAngle'], vals['endAngle'], vals['antiClock']);
+			context.stroke();
+		}
+		function drawArc() {
+			context.clearRect(0, 0, 300, 300);
+			context.beginPath();
+            context.arc(vals['arcx'],vals['arcy'],vals['radius'],vals['strtAngle'], vals['endAngle'], vals['antiClock']);
+			context.stroke();
+		}
+	
+		function clearCanvas() {
+			context.clearRect(0, 0, canvas.width, canvas.height);
+		}
+	$(document).ready(function(){
+		$('[type=range]').change(function(){
+            let dVal = $('#'+this.name);
+			dVal.text(this.value);
+			vals[this.name] = this.value;
+			drawArc();
+		});
+	});
+	</script>    
+</body>
+</html>

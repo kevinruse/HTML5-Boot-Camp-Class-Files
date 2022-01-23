@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Rectangles - finished</title>
+		<!--
+		  fillRect(x, y, width, height)	draws a filled Rectangle default fill=black
+		  strokeRect(x, y, width, height)	draws a rectangular outline in black 1 pixel
+   		  clearRect(x, y, width, height)	clears the specified rectangular area
+		-->
+		<script>
+			function drawOnCanvas() {
+                const canvas = document.getElementById('myCanvas');
+                let context = canvas.getContext('2d');
+				context.strokeRect(0, 0, canvas.width, canvas.height);
+				context.fillRect(25, 25, 100, 50);
+  			  context.clearRect(30, 30, 75, 25);
+			}
+		</script>
+	</head>
+	<body>
+		<h1>The HTML5 Canvas Element</h1>
+		<canvas id="myCanvas" width="200" height="200">
+			<p>Your browser does not support the Canvas element.</p>
+		</canvas>
+		<input type="button" id="drawCanvas" value="Draw on Canvas" onclick="drawOnCanvas();" />
+		<footer>
+			<cite><a href="http://dev.w3.org/html5/spec/Overview.html#the-canvas-element">http://dev.w3.org/html5/spec/Overview.html#the-canvas-element</a></cite>
+		</footer>
+	</body>
+</html>

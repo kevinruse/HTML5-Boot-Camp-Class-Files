@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta  charset="utf-8" />
+		<title>video-attributes - finished</title>
+		<script>
+			function getProperty() {
+				const vid = document.getElementById("myVid");
+				//vid.muted = true;
+				console.log("video property is " + vid.currentTime);
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Playing Video </h1>
+		<video id="myVid" src="media/FoodPlate.ogg" controls poster="media/videoPoster.png">
+			<p>Your browser does NOT support HTML5 Video</p>
+		</video>
+		<input type="button" name="getProperty" id="getProperty" value="Get Property" onClick="getProperty()">
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Introduction</title>
+</head>
+<body>
+<img src="../assets/images/W3C.svg" alt="W3C logo" width="72">
+<img src="../assets/images/HTML5_Logo_64.png" alt="">
+<p>Reference: <a href="https://www.w3.org/TR/html52/dom.html#documents">W3C Specification</a></p>
+<script>
+    console.log(`last modified: ${document.lastModified}`);
+    if(document.referrer === "") {
+        //console.log(document.currentScript)
+        console.log("no referrer");
+    }
+    else {
+        console.log(`referrer: ${document.referrer}`);
+    }
+    console.log(document.readyState);
+    document.onreadystatechange = ()=>console.log(document.readyState);
+    //console.log(document.head);
+    //console.log(document.body);
+    //console.log(document.title);
+    //console.log(document.images);
+    //console.log(document.links);
+    //console.log(document.scripts);
+</script>
+</body>
+</html>

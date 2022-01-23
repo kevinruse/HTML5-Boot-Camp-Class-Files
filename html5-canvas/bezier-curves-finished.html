@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>bezier-curves - finished</title>
+	<script>
+	function drawBezierCurve() {
+        const canvas = document.getElementById('myCanvas');
+        let context = canvas.getContext('2d');
+		context.beginPath();
+		context.moveTo(25, 75);
+		//bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)
+		context.bezierCurveTo(75, 37, 70, 25, 50, 25);
+		context.stroke();
+	}
+	</script>
+	<style>
+		canvas { border: 1px solid black; }
+	</style>
+</head>
+<body onload="drawBezierCurve();">
+	<canvas id="myCanvas">
+		<p>Your browser does not support Canvas</p>
+	</canvas>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dataset API setdata - finished</title>
+	<link rel="stylesheet" href="css/dataset.css"/>
+</head>
+<body>
+<h2>Grains</h2>
+<ul>
+	<li>Amaranth</li>
+	<li>Cornbread</li>
+	<li>Millet</li>
+	<li>Noodles</li>
+	<li>Pasta</li>
+	<li>Popcorn</li>
+</ul>
+<button id="setData" class="fpButton">Set Data</button>
+
+<script>
+	let liElems = document.querySelectorAll('li');
+
+	document.getElementById('setData').addEventListener('click', setData);
+
+	function setData() {
+		for (let i = 0; i < liElems.length; i++) {
+			if (liElems[i].innerHTML === "Amaranth") {
+				liElems[i].dataset.grain = "whole grain";
+			}
+			else if (liElems[i].innerHTML === "Cornbread") {
+				liElems[i].dataset.grain = "refined grain";
+			}
+			else if (liElems[i].innerHTML === "Millet") {
+				liElems[i].dataset.grain = "whole grain";
+			}
+			else if (liElems[i].innerHTML === "Noodles") {
+				liElems[i].dataset.grain = "refined grain";
+			}
+			else if (liElems[i].innerHTML === "Pasta") {
+				liElems[i].dataset.grain = "refined grain";
+			}
+			else if (liElems[i].innerHTML === "Popcorn") {
+				liElems[i].dataset.grain = "whole grain";
+			}
+		}
+	}
+
+
+
+</script>
+</body>
+</html>

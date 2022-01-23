@@ -1,0 +1,219 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ****************************************************************************************** CSS Resets */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+html {
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+#container {
+	width:960px;
+	margin: 0 auto;
+}
+/* ****************************************************************************************** Header Banner */
+#brandBanner {
+	margin-top: 8px;
+	background: linear-gradient(90deg, #1c2a16, #993, #1c2a16);
+	height: 100px;
+	width: 100%;
+}
+
+#logo {
+	margin-top: -31px;
+}
+/* ************************************************** Search Box */
+#searchBox {
+	padding-right: 20px;
+	padding-top: 13px;
+	text-align:right;
+	font-family:Verdana, Geneva, sans-serif;
+	color: #bfd730;
+}
+#searchBox a{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size: .80em;
+	color: #bfd730;
+	text-decoration:none;
+}
+#helpSearch ul li {
+	display:inline;
+	padding-right: 6px;
+	border-right: 1px solid #fff;
+}
+#helpSearch ul li:last-child {
+	border-right: none;
+}
+#searchForm {
+	float:right;
+}
+#brandBanner #search {
+	margin-top:24px;
+	width: 212px;
+	float: left;
+}
+#searchIcon {
+	padding-left:6px;
+	float: right;
+}
+/* ************************************************** Choose My Plate */
+#brandBanner h1 {
+	font-family:Verdana, Geneva, sans-serif;
+	font-size: 1.75em;
+	font-weight: bold;
+	color: #fff;
+	padding-left: 1.25em;
+}
+#brandBanner .my {
+	color: #bfd730;
+}
+/* ****************************************************************************************** Main Nav */
+#mainNav {
+	 margin-top: 8px;
+	 background-color: #bfd730;
+	 height: 50px;
+	 width: 100%;
+	 text-align:right;
+ }
+
+#mainNav ul {
+	padding-top:1em;
+	padding-bottom: 1em;
+	padding-right: 20px;
+}
+#mainNav ul li {
+	font-family:Verdana, Geneva, sans-serif;
+	font-size: .85em;
+	color: #1d2a16;
+	display:inline;
+	padding-right: 6px;
+	border-right: 1px solid #fff;
+}
+#mainNav ul li:last-child {
+	border-right: none;
+}
+/* ****************************************************************************************** Main Graphic */
+#mainPageGraphic {
+	margin-top: 8px;
+	height: 302px;
+	width: 100%;
+	background:url(../images/mainPageGraphic.jpg) no-repeat;
+}
+/* ****************************************************************************************** Main Content */
+#mainContent {
+	margin-top: 8px;
+	width: 100%;
+}
+/* ************************************************** Main Content Graphic */
+#mainContentGraphic {
+	float:left;
+}
+/* ************************************************** Main Content Text */
+#mainTextContent {
+	width: 427px;
+	float: left;
+}
+
+#mainTextContent h2 {
+	font-family:Verdana, Geneva, sans-serif;
+	font-size: 1.75em;
+	font-weight: normal;
+	color: #333333;
+	margin-bottom: 16px;
+	padding-top: 28px;
+}
+#mainTextContent p {
+	font-family:Verdana, Geneva, sans-serif;
+	font-size: .70em;
+	line-height: 1.85em;
+	font-weight: normal;
+	color: #333333;
+}
+/* ************************************************** Mobile App Download */
+#mobileApp {
+	width: 273px;
+	float: right;
+	text-align:center;
+}
+#mobileApp h3 {
+	font-family:Verdana, Geneva, sans-serif;
+	font-size: 1em;
+	font-weight: normal;
+	color: #1aa4d8;
+	margin-bottom: 12px;
+	padding-top: 32px;
+}
+#mobileAppGraphic {
+	padding-bottom: 12px;
+}
+/* ****************************************************************************************** Footer */
+footer {
+	clear:both;
+	border: 1px solid #999;
+	border-bottom: 1px solid #1aa4d8;
+	background-color:#eee;
+	width: 960px;
+	height: 180px;
+	padding-top: 10px;
+	margin-bottom: 8px;
+}
+
+#resources h3 {
+	font-family:Verdana, Geneva, sans-serif;
+	font-size: 1em;
+	font-weight: bold;
+	text-align:center;
+	margin-bottom:10px;
+}
+#resources section#foodGroups {
+	width: 115px;
+}
+#resources section#relatedResources {
+	width: 145px;
+	margin-right: 18px;
+}
+#resources section#printedMaterials {
+	margin-right:32px;
+}
+#resources section {
+	width:188px;
+	float: left;
+	margin-right: 8px;
+	margin-left: 4px;
+}
+#resources hr {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+#foodGroups h4, #audiences h4, #printedMaterials h4, #relatedResources h4, #addlInfo h4{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size: .7em;
+	font-weight:bold;
+	padding-bottom:4px;
+}
+#foodGroups ul li, #audiences ul li, #printedMaterials ul li, #relatedResources ul li, #addlInfo ul li {
+	list-style:none;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size: .7em;
+	line-height:1.35em;
+	color: #1d2a16;
+}
+#siteInfo {
+	clear: both;
+	border: none;
+	text-align:center;
+	background-color:transparent;
+}
+
+#siteInfo small {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 9px;
+	font-style: italic;
+}

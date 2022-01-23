@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hidden attribute</title>
+    <style>
+        #hiddenContent {
+            width: 250px;
+            border: 1px solid #000;
+            padding: 1em;
+        }
+        button {
+            margin-top: 1em;
+        }
+    </style>
+</head>
+<body>
+
+<p aria-hidden="true" hidden>This content is hidden.</p>
+<p aria-hidden="false">This content is not hidden.</p>
+
+<div id="hiddenContent">Now you see me!</div>
+<button id="hideContentBtn">Hide "Now you see me!"</button>
+<div id="message" hidden><p>Now you don't.</p></div>
+
+<script>
+    const hideContentBtn = document.getElementById('hideContentBtn');
+    const hiddenContent = document.getElementById('hiddenContent');
+    const message = document.getElementById('message');
+
+    hideContentBtn.addEventListener('click', hide);
+
+    function hide() {
+        hiddenContent.setAttribute('hidden', true);
+        hideContentBtn.setAttribute('hidden', true);
+        message.removeAttribute('hidden');
+    }
+</script>
+</body>
+</html>

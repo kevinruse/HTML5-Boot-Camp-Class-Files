@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Picture Element - Image Size</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+        #brandBanner {
+            height: 140px;
+            width: 100%;
+            border: 1px solid #666;
+            border-bottom: 3px solid #000;
+            background: linear-gradient(#1c2a16, #993,#1c2a16 );
+            background: -webkit-linear-gradient(top, #1c2a16 0%,#999933 50%,#1c2a16 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, #1c2a16 0%,#999933 50%,#1c2a16 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        }
+    </style>
+</head>
+<body>
+<header id="brandBanner">
+    <img id="logo" src="images/MyFoodPlate_logo.png" alt="Food Plate Logo" />
+</header>
+<section>
+    <img src="images/mainPageGraphic_1200.jpg"
+         srcset="images/mainPageGraphic_768.jpg 768w,
+                 images/mainPageGraphic_1200.jpg  1200w,
+                 images/mainPageGraphic_1500.jpg 1500w"
+         alt="">
+</section>
+</body>
+</html>

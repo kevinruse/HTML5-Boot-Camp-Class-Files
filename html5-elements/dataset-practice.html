@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dataset practice</title>
+    <style>
+        body {
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        table td, table th {
+            padding: 6px;
+        }
+        th {
+            background-color: #000;
+            font-weight:bold;
+            color: #fff;
+        }
+        tr, td {
+            border: 1px solid #000;
+        }
+
+        td[data-status='pastDue'] {
+            background-color: #cd0a0a;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Company</th>
+        <th>Amount</th>
+    </tr>
+    <tr>
+        <td>Acme Widgets</td>
+        <td data-status="pastDue">$12,458</td>
+    </tr>
+    <tr>
+        <td>Gizmo</td>
+        <td>$5,089</td>
+    </tr>
+    <tr>
+        <td>Products Inc.</td>
+        <td>$46,894</td>
+    </tr>
+    <tr>
+        <td>Building Supply Inc.</td>
+        <td data-status="pastDue">$39,450</td>
+    </tr>
+    <tr>
+        <td>Flooring Unlimited</td>
+        <td>$54,569</td>
+    </tr>
+    <tr>
+        <td>Bath Supply Inc.</td>
+        <td data-status="pastDue">$6,324</td>
+    </tr>
+    <tr>
+        <td>Full House, Ltd.</td>
+        <td>$12,340</td>
+    </tr>
+</table>
+<button id="removePastDue">Remove Past Due</button>
+<script>
+    document.getElementById('removePastDue').addEventListener('click', function() {
+       //add a function here that removes the row that contains past due companies
+        })
+    })
+</script>
+</body>
+</html>

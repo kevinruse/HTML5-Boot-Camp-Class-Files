@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Video Tracks</title>
+        <style>
+            html {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+	</head>
+	<body>
+		<h1>Playing Video </h1>
+		<video src="media/foodPlate_demo.ogg" type="video/ogg" controls>
+			<p>Your browser does NOT support HTML5 Video.</p>
+			<track kind="subtitles" label="English subtitles" src="media/video-tracks.vtt" srclang="en" default></track>
+		</video>
+	<h2>track element</h2>
+		<dl>
+            <dt>kind attribute</dt>
+			<dd>subtitles</dd>
+			<dd>captions</dd>
+			<dd>descriptions</dd>
+			<dd>chapters</dd>
+			<dd>metadata</dd>
+            <dt>src</dt>
+            <dd>text file that holds the data for the timed track cues. (each item in a track file is called a cue)</dd>
+		</dl>
+
+	</body>
+</html>
+
+

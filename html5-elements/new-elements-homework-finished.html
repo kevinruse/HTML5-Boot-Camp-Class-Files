@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML 5.2 New Elements - finished</title>
+    <style>
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table {
+            margin-top:2em;
+            border: 1px solid #000;
+            padding: .25em;
+        }
+    </style>
+</head>
+<body>
+<h1>Shopping Cart</h1>
+<h2>Countdown to purchase:</h2>
+<meter min="0" max="3" value="2"></meter>
+<figure>
+    <img src="images/tshirt.png" alt="t-shirt">
+    <figcaption>T-shirt size: small, color: blue</figcaption>
+</figure>
+<details>
+    <summary>Credit Cards</summary>
+    <p>We accept the following:</p>
+    <ul>
+        <li>Visa</li>
+        <li>MasterCard</li>
+        <li>Diners Club</li>
+        <li>Discover</li>
+        <li>American Express</li>
+        <li>PayPal</li>
+    </ul>
+</details>
+
+<h2>Products</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Item</th>
+        <th>Color</th>
+        <th>Size</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>&nbsp;</th>
+    </tr>
+    </thead>
+    <tr>
+        <td>Shirt</td>
+        <td><mark>blue</mark></td>
+        <td><mark>small</mark></td>
+        <td>1</td>
+        <td><del>12.99</del> 9.99</td>
+        <td><button id="add">Add</button></td>
+    </tr>
+</table>
+
+<table>
+    <thead>
+    <tr>
+        <th>Item</th>
+        <th>Color</th>
+        <th>Size</th>
+        <th>Quantity</th>
+        <th>Price</th>
+    </tr>
+    </thead>
+    <tbody id="products">
+
+    </tbody>
+</table>
+
+<template id="tr">
+    <tr>
+        <td>Shirt</td>
+        <td>blue</td>
+        <td>small</td>
+        <td>1</td>
+        <td>9.99</td>
+        <td>&nbsp;</td>
+    </tr>
+</template>
+
+<script>
+    let addBtn = document.getElementById('add');
+    addBtn.addEventListener('click', function() {
+        const tr = document.querySelector('#tr');
+        td = tr.content.querySelectorAll("td");
+        td[0].textContent = "Shirt";
+        td[1].textContent = "blue";
+        td[2].textContent = "small";
+        td[3].textContent = "1";
+        td[4].textContent = "9.99";
+        const cloneRow = document.importNode(tr.content, true);
+        const tb = document.querySelector('tbody#products');
+        tb.appendChild(cloneRow);
+    });
+</script>
+</body>
+</html>

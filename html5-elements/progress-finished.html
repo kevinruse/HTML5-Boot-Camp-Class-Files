@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>progress - finished</title>
+</head>
+<body>
+<h1>HTML 5 &lt;progress&gt; Element</h1>
+<p>This element presents a graphical representation of a tasks completion progress.</p>
+<progress id="downloadProgress" max="100" value="0"> </progress>
+<p>Status: <span id="status"></span></p>
+<script>
+    const progressBar = document.getElementById ('downloadProgress');
+    const status = document.getElementById('status');
+
+    let xhr = new XMLHttpRequest();
+    let xhrlocation = "https://www.kevinruse.com/resources/messages.xml";
+    xhr.open('GET', xhrlocation, true);
+    xhr.onerror = function() {
+        document.getElementById('status').innerHTML = xhr.statusText;
+    };
+
+    xhr.onprogress = function (evt) {
+        console.log('onprogress');
+        console.log(evt.loaded);
+            progressBar.max = 181540;
+            progressBar.value = evt.loaded;
+            status.innerText = "Download in progress..."
+    }
+    xhr.onloadstart = function (evt) {
+        console.log('onloadstart');
+        progressBar.value = 0;
+        status.innerText = "Download started..."
+
+    }
+    xhr.onloadend = function (evt) {
+        console.log('onloadEnd');
+        progressBar.value = evt.loaded;
+        status.innerText = "Download ended."
+        console.log(evt.total);
+    }
+
+    xhr.send(null);
+</script>
+
+</body>
+</html>

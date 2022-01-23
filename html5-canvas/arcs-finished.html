@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>arcs - finished</title>
+		<script>
+			function drawArc() {
+				const canvas = document.getElementById('myCanvas');
+                let context = canvas.getContext('2d');
+				//arc(x, y, radius, startAngle, endAngle, anticlockwise)		
+				context.arc(75, 75, 35, 0, Math.PI, false); 
+				context.stroke();
+			}
+		</script>
+		<style>
+			canvas {
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body onload="drawArc();">
+		<p>To convert degrees to radians you can use the following JavaScript expression: var radians = (Math.PI/180)*degrees</p>
+		<canvas id="myCanvas">
+			<p>Your browser does not support Canvas</p>
+		</canvas>
+	</body>
+</html>

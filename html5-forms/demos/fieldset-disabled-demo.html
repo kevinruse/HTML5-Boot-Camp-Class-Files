@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fieldset and Disabled</title>
+    <style>
+        fieldset {
+            width: 500px;
+            margin: 2em;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <fieldset disabled>
+        <legend>Business Information</legend>
+            <label for="name">Name</label>
+            <input type="text" id="name" value="Joseph">
+            <label for="businessPwd">Password</label>
+            <input type="password" id="businessPwd" value="secret">
+    </fieldset>
+    <fieldset >
+        <legend>Personal Information</legend>
+                <label for="nickName">Nick Name</label>
+                <input type="text" id="nickName" value="Joe">
+                <label for="personalPwd">Password</label>
+                <input type="password" id="personalPwd" value="secret">
+    </fieldset>
+</form>
+</body>
+</html>

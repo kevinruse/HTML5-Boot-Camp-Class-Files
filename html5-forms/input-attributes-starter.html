@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="Food Plate, Daily Food Diary, USDA Food Plate">
+    <meta name="author" content="Kevin Ruse">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Input Attributes - starter</title>
+    <link rel="icon" 
+          type="image/png" 
+          href="images/favicon.png">
+    <script src="scripts/jquery_1_6_1.js"></script>
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+<!-- #wrapper -->
+<div id="wrapper"> 
+  <!-- top nav -->
+  <nav>
+    <div class="menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- end of top nav -->
+  
+  <section id="main"><!-- #main content and sidebar area -->
+    <section id="content"><!-- #content -->
+      
+      <section>
+        <h3><a href="#">Join now to download use your new Food Plate Diary</a></h3>
+        <img src="images/apple.gif" alt="apple" width="170" height="181" class="inlineImage"> <b>Fill out this short application and you'll be ready to download and start tracking your daily food intake. </b>
+
+      </section>
+      <section>
+        <p>Join the Food Plate </p>
+        <form action="" method="post" name="join_form" id="join_form">
+     
+            <label for="userName">User Name</label>
+            <input type="text" name="userName" id="userName">
+
+            <label for="userPhone">Phone: </label>
+            <input type="text" name="userPhone" id="userPhone">
+
+            <label for="userWebsite">Website:</label>
+            <input type="text" name="userWebsite" id="userWebsite">
+
+            <label for="userEmail">Email:</label>
+            <input type="text" name="userEmail" id="userEmail">
+
+           <label for="activityLevel">Activity Level: </label>
+            <input id="activityLevel" style="display:inline" >
+        	<br />
+            <label for="age">Age:</label>
+            <input name="age" id="age">
+   
+            <label for="joinDate">Date you would like to join:</label>
+            <input id="joinDate" type="text">
+            <label for="color">Change the default color of your Food Plate:</label>
+            <input type="text" id="color" />
+    		<input type="button" value="Submit">
+        </form>
+ 
+      </section>
+    </section>
+    <!-- end of #content -->
+    
+    <aside id="sidebar"><!-- sidebar -->
+      <h1>My  Food Plate</h1>
+      <img src="images/iPhoneApp_sm.png" alt="" width="168" height="314">
+
+      <h3>Connect With Us</h3>
+      <ul>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Facebook</a></li>
+      </ul>
+    </aside>
+    <!-- end of sidebar --> 
+  </section>
+  <!-- end of #main content and sidebar-->
+  <footer>
+    <section id="footer-area">
+      <section id="footer-outer-block">
+        <aside class="footer-segment">
+          <h4>The Food Groups</h4>
+          <ul>
+            <li class="fruit"><a href="#">Fruits</a></li>
+            <li class="veg"><a href="#">Vegetables</a></li>
+            <li class="grain"><a href="#">Grains</a></li>
+            <li class="protein"><a href="#">Protein</a></li>
+            <li class="dairy"><a href="#">Dairy</a></li>
+          </ul>
+        </aside>
+        <!-- end of #first footer segment -->
+        <aside class="footer-segment">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Your Daily Food Plate [video]</a></li>
+            <li><a href="#">Food Tips</a></li>
+            <li><a href="#">Tech Support</a></li>
+          </ul>
+        </aside>
+        <!-- end of #second footer segment -->
+        <aside class="footer-segment">
+          <h4>Your Daily Food Plate</h4>
+          <ul>
+            <li><a href="#">Download</a></li>
+            <li><a href="#">Documentation</a><a href="#"></a></li>
+          </ul>
+        </aside>
+        <!-- end of #third footer segment -->
+        <aside class="footer-segment">
+          <h4>USDA Food Plate</h4>
+          <p>Learn more about the<a href="http://www.pamf.org/teen/health/nutrition/pyramid.html"> food pyramid</a>. and the <a href="http://www.choosemyplate.gov/">USDA Food Plate</a>.</p>
+        </aside>
+        <!-- end of #fourth footer segment --> 
+      </section>
+      <!-- end of footer-outer-block --> 
+      
+    </section>
+    <!-- end of footer-area --> 
+  </footer>
+</div>
+<!-- #wrapper -->
+</body>
+</html>

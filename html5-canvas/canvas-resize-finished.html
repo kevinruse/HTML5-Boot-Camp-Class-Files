@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Canvas-resize - finished</title>
+
+		<style>
+			#myCanvas {
+				border: dashed 1px black;
+			}
+		</style>
+
+		<script>
+		function resizeCanvas() {
+            const myCanvas = document.getElementById('myCanvas');
+			myCanvas.width = 400;
+			myCanvas.height = 400;
+		}
+		</script>
+
+	</head>
+	<body>
+		<h1>The HTML5 Canvas Element</h1>
+		<canvas id="myCanvas" width="200" height="200">
+			<p>Your browser does not support the Canvas element.</p> 
+		</canvas>
+
+		<input type="button" id="resizeCanvas" value="Resize Canvas" onclick="resizeCanvas();" />
+
+		<footer> <cite><a href="http://dev.w3.org/html5/spec/Overview.html#the-canvas-element">http://dev.w3.org/html5/spec/Overview.html#the-canvas-element</a></cite> </footer>
+	</body>
+</html>

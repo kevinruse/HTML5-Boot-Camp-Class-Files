@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Constraint-validation Challenge - finished</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="constraintValidation.css"/>
+</head>
+
+<body>
+<div id="wrapper">
+	<header id="welcomeHeader">
+		<img id="foodPlateImg" src="images/MyFoodPlate_logo.png" />
+	</header>
+	<section id="mainContent">
+		<form>
+            <h1>Body Mass Index</h1>
+            <fieldset>
+                <legend>Unit of Measurement</legend>
+                <label for="unitsMetric">
+                    cm/kg:
+                </label>
+                <input type="radio" id="unitsMetric" name="units" value="metric" required>
+                <label for="unitsEn">
+                    in/lb:
+                </label>
+                <input type="radio" id="unitsEn" name="units" value="en">
+            </fieldset>
+            <fieldset>
+                <legend>Height/Weight</legend>
+                <label for="h">Height:</label>
+                <input type="number" required id="h" name="h" size="6" class="blockElem">
+                <label for="w">Weight:</label>
+                <input type="number" required id="w" name="w" size="6" class="blockElem">
+            </fieldset>
+            <fieldset>
+                <legend>Contact Info:</legend>
+                <label for="email" class="blockElem">Email: </label>
+                <input type="email" required id="email" size="10">
+            </fieldset>
+			<input type="submit" id="calcBMI_btn" name="calcBMI_btn" value="Calculate BMI">
+
+		</form>
+
+	</section>
+</div>
+
+</body>
+</html>

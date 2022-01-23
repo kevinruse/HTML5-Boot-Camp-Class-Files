@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Time Demo</title>
+    <style>
+        p {
+            font-weight: bold;
+        }
+        p::after {
+            content: ': ';
+        }
+        time {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<h1>The &lt;time&gt; element</h1>
+<p>The following examples are from: https://www.w3.org/TR/html52/textlevel-semantics.html#the-time-element</p>
+<p>A valid month string</p>
+<time>2011-11</time>
+<p>A valid date string</p>
+<time>2011-11-18</time>
+<p>A valid yearless date string</p>
+<time>11-18</time>
+<p>A valid time string</p>
+<time>14:54</time>
+<time>14:54:39</time>
+<time>14:54:39.929</time>
+<p>A valid floating date and time string
+</p>
+<time>2011-11-18T14:54</time>
+<time>2011-11-18T14:54:39</time>
+<time>2011-11-18T14:54:39.929</time>
+<time>2011-11-18 14:54</time>
+<time>2011-11-18 14:54:39</time>
+<time>2011-11-18 14:54:39.929</time>
+<p>Times with dates but without a time zone offset are useful for specifying events that are observed at the same specific time in each time zone, throughout a day. For example, the 2020 new year is celebrated at 2020-01-01 00:00 in each time zone, not at the same precise moment across all time zones. For events that occur at the same time across all time zones, for example a videoconference meeting, a valid global date and time string is likely more useful.</p>
+
+<p>A valid time-zone offset string</p>
+<time>Z</time>
+<time>+0000</time>
+<time>+00:00</time>
+<time>-0800</time>
+<time>-08:00</time>
+<p>A valid global date and time string
+</p>
+<time>2011-11-18T14:54Z</time>
+<time>2011-11-18T14:54:39Z</time>
+<time>2011-11-18T14:54:39.929Z</time>
+<time>2011-11-18T14:54+0000</time>
+<time>2011-11-18T14:54:39+0000</time>
+<time>2011-11-18T14:54:39.929+0000</time>
+<time>2011-11-18T14:54+00:00</time>
+<time>2011-11-18T14:54:39+00:00</time>
+<time>2011-11-18T14:54:39.929+00:00</time>
+<time>2011-11-18T06:54-0800</time>
+<time>2011-11-18T06:54:39-0800</time>
+<time>2011-11-18T06:54:39.929-0800</time>
+<time>2011-11-18T06:54-08:00</time>
+<time>2011-11-18T06:54:39-08:00</time>
+<time>2011-11-18T06:54:39.929-08:00</time>
+<time>2011-11-18 14:54Z</time>
+<time>2011-11-18 14:54:39Z</time>
+<time>2011-11-18 14:54:39.929Z</time>
+<time>2011-11-18 14:54+0000</time>
+<time>2011-11-18 14:54:39+0000</time>
+<time>2011-11-18 14:54:39.929+0000</time>
+<time>2011-11-18 14:54+00:00</time>
+<time>2011-11-18 14:54:39+00:00</time>
+<time>2011-11-18 14:54:39.929+00:00</time>
+<time>2011-11-18 06:54-0800</time>
+<time>2011-11-18 06:54:39-0800</time>
+<time>2011-11-18 06:54:39.929-0800</time>
+<time>2011-11-18 06:54-08:00</time>
+<time>2011-11-18 06:54:39-08:00</time>
+<time>2011-11-18 06:54:39.929-08:00</time>
+<p>
+A valid week string</p>
+<time>2011-W47</time>
+<p>Four or more ASCII digits, at least one of which is not U+0030 DIGIT ZERO (0)
+</p><time>2011</time>
+<time>0001</time>
+<p>A valid duration string</p>
+<time>PT4H18M3S</time>
+<time>4h 18m 3s</time>
+</body>
+</html>

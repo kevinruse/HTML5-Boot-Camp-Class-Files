@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>The HTML5 Canvas: Quadratic Curve Demo</title>
+	<script src="../libs/jquery-3.1.1.js"></script>
+	<script>
+        let vals = {cp1x:0,cp1y:0,x:0,y:0};
+	function drawQuadCurve() {
+        let canvas = document.getElementById('myCanvas');
+        let context = canvas.getContext('2d');
+		context.clearRect(0, 0, 300, 150);
+		context.beginPath();
+		context.moveTo(25,75);
+		//quadraticCurveTo(cp1x, cp1y, x, y)
+		context.quadraticCurveTo(vals['cp1x'],vals['cp1y'],vals['x'],vals['y']);
+		context.stroke();
+	}
+	</script>
+	<script>
+	$(document).ready(function(){
+		$('[type=range]').change(function(){
+            let dVal = $('#'+this.name);
+			dVal.text(this.value);
+			vals[this.name] = this.value;
+			drawQuadCurve();
+		});
+	});
+	</script>
+	<style>
+		canvas { border: 1px solid black; }
+	</style>
+</head>
+<body>
+	<canvas id="myCanvas"></canvas><br>
+	<br>
+	<label for="cp1x">Control Point X: cp1x </label>
+	<input type="range" min="0" max="300" name="cp1x" id="cp1x" value="0"><span id="cp1xSpan"></span><br>
+	<label for="cp1y">Control Point Y: cp1y </label>
+	<input type="range" min="0" max="150" name="cp1y" id="cp1y" value="0"><span id="cp1ySpan"></span><br>
+	<label for="x">X Coordinate: x </label>
+	<input type="range" min="0" max="300" name="x" id="x" value="0"><span id="xSpan"></span><br>
+	<label for="y">Y Coordinate: y </label>
+	<input type="range" min="0" max="150" id="y" name="y" value="0"><span id="ySpan"></span><br>
+</body>
+</html>

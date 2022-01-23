@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Scope</title>
+</head>
+<body>
+<article>
+  <p>As of January 23, 2017 css scope is supported only in Firefox.</p>
+  <section>
+    <p>This section element is outside of the css scope.</p>
+  </section>
+  <section>
+    <style scoped>
+      :scope { background-color: #ffff00; }
+    </style>
+    <p>This element is inside of the css scope.</p>
+  </section>
+  <section>
+    <p>This section element is outside of the css scope.</p>
+  </section>
+</article>
+</body>
+</html>

@@ -1,0 +1,146 @@
+header {
+    margin: 0;
+    background: linear-gradient(#1c2a16, #993,#1c2a16 );
+    height: 150px;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+.mainNav {
+    padding: .75em;
+    width: 70%;
+    float: right;
+    display: flex;
+    justify-content: space-around;
+}
+
+.mainNav * {
+    flex: 3;
+    border-radius: 0;
+}
+
+.mainImg {
+    float: left;
+    padding-right: 2em;
+}
+
+.mainArticle {
+    float: right;
+    width: 70%;
+}
+footer {
+    width: 100%;
+    clear: both;
+    float: none;
+}
+
+.footerHeader {
+    background: #ccc;
+    border-top: 1px solid #1c2a16;
+    border-bottom: 1px solid #1c2a16;
+    height: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clear:both;
+    float: none;
+    /*non flex supporting browsers */
+    text-align: center;
+}
+
+.footerBody {
+    width: 90%;
+    margin: 0 10%;
+}
+
+.footerSection {
+    width: 23%;
+    margin-right: .5em;
+    float: left;
+    line-height: 1.8em;
+}
+@media (max-width: 768px) {
+    .mainNav {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        float: none;
+        /* iOS <= 5.1 - center buttons*/
+        text-align: center;
+    }
+    .mainNav button {
+        margin: .5em;
+    }
+}
+
+.mainSection {
+    margin: 1em;
+}
+
+
+#helpSearch ul li a {
+    padding-right: 1em;
+    border-right: 1px solid #fff;
+    color: #fff;
+}
+
+#helpSearch ul li:last-child a {
+    border-right: none;
+}
+
+.glyph-icon-size-lg {
+    font-size: 1.5em;
+    color: #BED732;
+}
+
+.fp-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 1.42em;
+    text-align: center;
+    white-space:nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 0;
+    height: 3em;
+}
+
+.fp-btn:hover {
+    color: #000;
+}
+
+.fp-plate-blue {
+    background-color: #00B7F1;
+    color: #fff;
+}
+
+.fp-plate-red {
+    background-color: #E01E26;
+    color: #fff;
+}
+
+.fp-plate-orange {
+    background-color:#D4691B;
+    color: #fff;
+}
+.fp-plate-green {
+    background-color: #67B744;
+    color: #fff;
+}
+
+.fp-plate-purple {
+    background-color: #5E498E;
+    color: #fff;
+}
+
+/* utility classes */
+.third {
+    width: 30%;
+}
+
+.full {
+    width: 100%;
+}

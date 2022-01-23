@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dataset API getdata - finished</title>
+	<link rel="stylesheet" href="css/dataset.css"/>
+
+</head>
+<body>
+<h2>Grains</h2>
+<ul>
+		<li data-grain="whole grain">Amaranth</li>
+		<li data-grain="refined grain">Cornbread</li>
+		<li data-grain="whole grain">Millet</li>
+		<li data-grain="refined grain">Noodles</li>
+		<li data-grain="refined grain">Pasta</li>
+		<li data-grain="whole grain">Popcorn</li>
+</ul>
+<button id="wholeGrains" class="fpButton">Whole Grains</button>
+<button id="refinedGrains" class="fpButton">Refined Grains</button>
+<script>
+/*	let liElems = document.querySelectorAll('li');
+	document.getElementById('wholeGrains').addEventListener('click', function() {
+		for (let i = 0; i < liElems.length; i++) {
+			if (liElems[i].dataset.grain === "whole grain") {
+				//console.log(liElems[i] + " is a whole grain.");
+				liElems[i].style.backgroundColor = '#00ff00';
+			}
+		}
+	});
+	document.getElementById('refinedGrains').addEventListener('click', function() {
+		for (let i = 0; i < liElems.length; i++) {
+			if (liElems[i].dataset.grain === "refined grain") {
+				//console.log(liElems[i] + " is a whole grain.");
+				liElems[i].style.backgroundColor = '#ffff00';
+			}
+		}
+	});*/
+
+	//preferred method using spread operator and dataset property
+	/*The spread syntax allows an expression to be expanded in places where multiple arguments (for function calls) or multiple 		elements (for array literals) or multiple variables  (for destructuring assignment) are expected. per https://developer.mozilla		.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator*/
+    //[...document.querySelectorAll('li')].map(item => console.log(item.dataset.grain));
+    document.getElementById('refinedGrains').addEventListener('click', function() {
+        [...document.querySelectorAll('li')].map(item => {
+            if (item.dataset.grain === "refined grain") {
+                item.style.backgroundColor = '#ffff00';
+            }
+        })
+    });
+	document.getElementById('wholeGrains').addEventListener('click', function() {
+    [...document.querySelectorAll('li')].map(item => {
+        if (item.dataset.grain === "whole grain") {
+            item.style.backgroundColor = '#00ff00';
+        }
+    })
+})
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+/* CSS Document */
+
+#container {
+	counter-reset: footnotes;
+	width: 600px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .85em;
+	line-height: 1.4em;
+	margin: 24px auto;
+}
+figure {
+ 
+        font-weight:bold;        
+		border: 1px solid #000000;
+		padding: 18px;
+		width: 550px;
+		box-shadow: 5px 5px 5px 5px #333;
+        margin-bottom: 30px;
+		margin-left: 0;
+}
+    
+figcaption {
+    	font-size: 12px;
+        font-family:Arial, Helvetica, sans-serif;
+		padding-bottom: 10px;
+}
+
+h3.footnote {
+	counter-increment: footnotes;
+	text-decoration: none;
+	outline: none;
+	color: inherit;
+}
+
+h3.footnote::before {
+	content: ' Figure: ' '[' counter(footnotes) ']: ';
+	color: #E01E26;
+}
+
+table {
+	font-weight: normal;
+	padding: 3px;
+}
+td, th {
+	text-align: left;
+}

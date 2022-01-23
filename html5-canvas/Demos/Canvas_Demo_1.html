@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Optional Canvas Exercise</title>
+<style>
+#canvasDiv {
+			margin-left: 80px;
+			margin-top: 120px;
+}
+</style>
+</head>
+<body>
+<section>
+<div id="canvasDiv">
+<canvas id="canvas" width="400" height="325">
+This text is displayed if your browser does not support HTML5 Canvas.
+</canvas>
+</div>
+
+<script>
+//colors: grain, protein, vegetables, fruits
+let myColor = ["#5b448a", "#1cad46", "#d71d22", "#d3691b"];
+let myData = [30, 20, 30, 20];
+function getTotal() {
+    let myTotal = 0;
+    for (let j = 0; j < myData.length; j++) {
+        myTotal += (typeof myData[j] == 'number') ? myData[j] : 0;
+    }
+    return myTotal;
+}
+function plotData() {
+    let canvas;
+    let ctx;
+    let lastend = 0;
+    let myTotal = getTotal();
+    canvas = document.getElementById("canvas");
+    ctx = canvas.getContext("2d");
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (let i = 0; i < myData.length; i++) {
+        ctx.fillStyle = myColor[i];
+        ctx.beginPath();
+        ctx.moveTo(200, 160);
+        ctx.arc(200, 160, 160, lastend, lastend + (Math.PI * 2 * (myData[i] / myTotal)), false);
+        ctx.lineTo(200, 160);
+        ctx.fill();
+        lastend += Math.PI * 2 * (myData[i] / myTotal);
+        ctx.fillStyle = "#3e85c5";
+        ctx.beginPath();
+        ctx.arc(320, 50, 45, 0, Math.PI * 2, true);
+        ctx.closePath();
+        ctx.fill();
+    }
+}
+plotData(); 
+</script>
+</section>
+</body>
+</html>

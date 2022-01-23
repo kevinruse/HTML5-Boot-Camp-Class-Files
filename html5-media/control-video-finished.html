@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>control-video - finished</title>
+</head>
+<body>
+<h1>Controlling Video </h1>
+  <video id="demo" src="media/FoodPlate.ogg">
+    <p>Your browser does NOT support HTML5 Video</p>
+  </video>
+  		<input name="play_btn" id="play_btn" type="button" value="Play" />
+  		<input name="pause_btn" id="pause_btn" type="button" value="Pause" />
+		<label for="volumeControl">Volume:</label>
+  		<input type="range" id="volumeControl" name="volumeControl" 
+  		 min="0" max="1" step="0.1" value="1" />
+		<label for="seekbar">Seekbar:</label>
+  		<input type="range" id="seekbar" name="seekbar" 
+  		 step="any" value="1" />
+<script  src="scripts/videoPlayer-finished.js"></script>
+</body>
+</html>

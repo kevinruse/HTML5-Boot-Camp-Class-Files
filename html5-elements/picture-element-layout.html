@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Picture Element - layout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="libs/bootstrap.css" rel="stylesheet">
+    <style>
+        html, body, header, section, footer {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            margin: 0;
+            background: linear-gradient(#1c2a16, #993,#1c2a16 );
+            background: -webkit-linear-gradient(top, #1c2a16 0%,#999933 50%,#1c2a16 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, #1c2a16 0%,#999933 50%,#1c2a16 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            background-repeat: no-repeat;
+            height: 150px;
+            padding: 24px;
+            display: flex;
+            justify-content: space-between;
+        }
+        footer {
+            width: 100%;
+            clear: both;
+            float: none;
+        }
+        .footerHeader {
+            background: #ccc;
+            border-top: 1px solid #1c2a16;
+            border-bottom: 1px solid #1c2a16;
+            height: 4em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            clear:both;
+            float: none;
+            /*non flex supporting browsers */
+            text-align: center;
+        }
+        .footerBody {
+            width: 90%;
+            margin: 0 10%;
+        }
+        .footerSection {
+            width: 23%;
+            margin-right: .5em;
+            float: left;
+            line-height: 1.8em;
+        }
+        .mainSection {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        #helpSearch ul li a {
+            padding-right: 1em;
+            border-right: 1px solid #fff;
+            color: #fff;
+        }
+        #helpSearch ul li:last-child a {
+            border-right: none;
+        }
+        .glyph-icon-size-lg {
+            font-size: 1.5em;
+            color: #BED732;
+        }
+        .graphic {
+            width: 40%;
+            float: left;
+            display: inline;
+        }
+        .fullSize {
+            width: 100%;
+        }
+        .mainArticle {
+            width: 60%;
+            float: right;
+            display: inline;
+            padding: 0 2em;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img id="logo" src="images/choosemyplate_logo.png" alt="Food Plate Logo" class="pull-left">
+    <nav id="helpSearch" class="pull-right hidden-xs">
+        <ul class="list-inline">
+            <li><a href="#" class="text-white">Help</a></li>
+            <li><a href="#" class="text-white">Search Tips</a> <span class="glyphicon glyphicon-search glyph-icon-size-lg"></span> </li>
+        </ul>
+        <form id="searchForm" class="hidden-xs pull-right">
+            <input type="text" class="form-control" placeholder="Search">
+        </form>
+    </nav>
+</header>
+<section class="mainSection">
+    <div class="graphic">
+        <picture>
+            <source media="(min-width: 320px) and (max-width: 768px)" srcset="images/kidsStateDinner-cropped.jpg" class="fullSize">
+            <source media="(min-width: 769px)" srcset="images/kidsStateDinner.jpg" class="fullSize">
+            <img src="images/kidsStateDinner.jpg" alt="Kids State Dinner." class="fullSize">
+        </picture>
+    </div>
+    <article class="mainArticle">
+        <h1>My Food Plate</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto delectus, distinctio dolorem dolorum ex excepturi exercitationem facere ipsam laboriosam laudantium molestias mollitia nihil quaerat quod sequi soluta suscipit totam unde.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eius est iure magnam, magni optio quibusdam similique? Ab aspernatur distinctio iste laborum mollitia officiis quia veritatis voluptatibus. Fugiat, id, sequi.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto delectus, distinctio dolorem dolorum ex excepturi exercitationem facere ipsam laboriosam laudantium molestias mollitia nihil quaerat quod sequi soluta suscipit totam unde.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eius est iure magnam, magni optio quibusdam similique? Ab aspernatur distinctio iste laborum mollitia officiis quia veritatis voluptatibus. Fugiat, id, sequi.</p>
+    </article>
+</section>
+<footer class="hidden">
+    <header class="footerHeader">
+        <h4 class="mainFooter">Resources for Nutrition and Health</h4>
+    </header>
+    <section class="footerBody">
+        <section class="footerSection">
+            <h4>Food Groups</h4>
+            <ul>
+                <li>Fruits</li>
+                <li>Vegetables</li>
+                <li>Grains</li>
+                <li>Protein Foods</li>
+                <li>Dairy</li>
+                <li>Oils</li>
+                <li>Empty Calories</li>
+            </ul>
+        </section>
+        <section class="footerSection">
+            <h4>Audiences</h4>
+            <ul>
+                <li>Dieters</li>
+                <li>Pregnant Women</li>
+                <li>Children (6-11)</li>
+                <li>Preschoolers (2-5)</li>
+                <li>Educators/Teachers</li>
+                <li>Health Professionals</li>
+                <li>Partners</li>
+            </ul>
+        </section>
+        <section class="footerSection">
+            <h4>Printed Materials</h4>
+            <ul>
+                <li>10 Tips Nutrition</li>
+                <li>My Plate Poster</li>
+                <li>Coloring Sheets</li>
+                <li>My Plate Images</li>
+                <li>More  Materials</li>
+                <li>Ordering Materials</li>
+            </ul>
+        </section>
+        <section class="footerSection">
+            <h4>Resources</h4>
+            <ul>
+                <li>Dietary Guidelines</li>
+                <li>Food Safety</li>
+                <li>Nutrition Data</li>
+                <li>USDA Center</li>
+                <li>Policy and Promotion</li>
+            </ul>
+        </section>
+    </section>
+</footer>
+</body>
+</html>

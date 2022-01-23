@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data element - starter</title>
+    <style>
+        html {
+            font-family: "Arial", sans-serif;
+            font-size: 14px;
+            line-height: 1.3em;
+        }
+
+        body {
+            width: 800px;
+            margin: 1em auto;
+        }
+        .tooltip{
+            display: inline;
+            position: relative;
+        }
+        .setTooltip:after {
+            background: rgba(0,0,0,.75);
+            border-radius: 3px;
+            color: #fff;
+            padding: 0 15px;
+            position: absolute;
+            left: 45%;
+            z-index: 100;
+            content: "ISBN #: " attr(value);
+        }
+    </style>
+</head>
+<body>
+<h1>HTML &lt;data&gt; element</h1>
+<p>The data element provides alternative values for content. For example, your markup may include a reference to a
+    book, and you would like to include additional data such as the ISBN number.</p>
+<p>The data element's value property can be used as a JavaScript hook to access the data.</p>
+<h2>Example</h2>
+<p>HTML 5 Boot Camp <em>with the latest 5.2 specification</em></p>
+</body>
+
+</html>

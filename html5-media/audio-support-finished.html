@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Audio-Support - finished</title>
+		<script>
+		//Step 1
+		function checkAudioSupport() {
+			let hasAudio = !!(document.createElement('audio').canPlayType);
+			console.log("Audio support = " + hasAudio);
+			alert("Audio Support = " + hasAudio);
+		}
+		</script>
+	</head>
+	<body>
+		<h1>Media Elements: Audio</h1>
+		<h2>Elements:</h2>
+		<pre>&lt;video&gt;</pre>
+		<pre>&lt;audio&gt;</pre>
+		<input type="button" name="audioSupport" id="audioSupport" value="Audio Support?" onclick="checkAudioSupport();">
+		<h2>Audio Attributes:</h2>
+		<table width="600" border="1" cellspacing="2" cellpadding="2">
+			<tr>
+			<th width="84" scope="col">Attribute</th>
+			<th width="93" scope="col">Value</th>
+			<th width="395" scope="col">What id does</th>
+		</tr>
+		<tr>
+			<td>autoplay</td>
+			<td>autoplay</td>
+			<td>Plays the audio automatically</td>
+		</tr>
+		<tr>
+			<td>controls</td>
+			<td>controls</td>
+			<td>Displays controls: play, pause, volume</td>
+ 		</tr>
+		<tr>
+			<td>loop</td>
+			<td>loop</td>
+			<td>Plays the audio over again after its finished playing</td>
+		</tr>
+		<tr>
+			<td>preload</td>
+			<td>preload</td>
+			<td>Loads the audio at page load, ignored if &quot;autoplay&quot; is present</td>
+		</tr>
+		<tr>
+			<td>src</td>
+			<td>[url]</td>
+			<td>Sets url of the audio to play</td>
+		</tr>
+		</table>
+		<h2>Checking for Browser Support</h2>
+		<p>To check for browser support of  <code>&lt;video&gt;</code> and  <code>&lt;audio&gt;</code> elements you can use JavaScript to:</p>
+		<p> Dynamically create the <code>&lt;video&gt;</code> and <code>&lt;audio&gt;</code> elements.</p>
+		<p>Check for the existence of a method on the element.</p>
+		<p>If the method doesn't exist the browser does not support the element.</p>
+		<p>i.e.:</p>
+		<p>var hasAudio = (document.createElement('audio').canPlayType);</p>
+	</body>
+</html>

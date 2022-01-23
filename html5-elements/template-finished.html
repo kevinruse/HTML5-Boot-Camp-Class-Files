@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>templates - finished</title>
+    <style>
+        html {
+            font-family: futura, helvetica, sans-serif;
+        }
+        p {
+            font-family: futura, helvetica, sans-serif;
+            font-size: 1em;
+            line-height: 1.4em;
+        }
+        button {
+            margin-top: 2em;
+        }
+        pre {
+            font-size: 1.4em;
+        }
+    </style>
+</head>
+<body>
+<h1 id="template">&lt;template&gt;</h1>
+<p>The template element is used to declare fragments of HTML that can be cloned and inserted in the document by script.</p>
+<div id="welcome"></div>
+<button id="showTemplate">Show the Template</button>
+<template id="tpl">
+    Hi <span class="name"></span>!<img src="images/glad.png" width="42" height="42">
+</template>
+
+<h3>The Template:</h3>
+<pre>
+    &lt;template id="tpl"&gt;
+        Hi &lt;span class="name"&gt;&lt;/span&gt;!&lt;img src="glad.png" width="42" height="42"&gt;
+    &lt;/template&gt;
+</pre>
+<h3>The JavaScript:</h3>
+<dl>
+    <dt>
+    importNode
+    <dd>
+        <pre>document.importNode(externalNode, [deep]) </pre>
+        <p>Creates a copy of a node from an external document that can be inserted into the current document.</p>
+    </dd>
+    <dt>arguments</dt>
+    <dd><pre>externalNode:</pre> The node from another document to be imported.
+        <pre>deep:</pre>  <p>A boolean, indicating whether the descendants of the imported node need to be imported. default=false</p>
+    </dd>
+    </dl>
+    <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/importNode"> https://developer.mozilla.org/en-US/docs/Web/API/Document/importNode </a></p>
+    <p>Spec: <a href="https://html.spec.whatwg.org/multipage/scripting.html#the-template-element">https://html.spec.whatwg.org/multipage/scripting.html#the-template-element</a></p>
+    <script>
+        let loadTemplateButton = document.getElementById('showTemplate');
+        loadTemplateButton.addEventListener('click', function() {
+            let tpl = document.querySelector('#tpl');
+            tpl.content.querySelector('.name').textContent = "Kevin";
+            //document.importNode(externalNode, [deep]) Creates a copy of a node from an external document that can be inserted into the current document.
+            //externalNode: The node from another document to be imported.
+            //deep: A boolean, indicating whether the descendants of the imported node need to be imported. default=false https://developer.mozilla.org/en-US/docs/Web/API/Document/importNode
+            let clone = document.importNode(tpl.content, true);
+            document.getElementById('welcome').appendChild(clone);
+        });
+    </script>
+</body>
+</html>

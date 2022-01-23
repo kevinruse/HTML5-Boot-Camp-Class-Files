@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>modernizr - starter</title>
+	</head>
+	<body>
+		<h1>New Media Elements: Video</h1>
+		<h2>Elements:</h2>
+		<pre>&lt;video&gt;</pre>
+		<pre>&lt;audio&gt;</pre>
+		<input type="button" name="videoSupport" id="videoSupport" value="Video Support?" onclick="checkVideoSupport()">
+		<h2>Video Attributes:</h2>
+		<table width="600" border="1" cellspacing="2" cellpadding="2">
+			<tr>
+				<th width="84" scope="col">Attribute</th>
+				<th width="93" scope="col">Value</th>
+				<th width="395" scope="col">What it does</th>
+			</tr>
+			<tr>
+				<td>audio</td>
+				<td>muted</td>
+				<td>Sets the default &quot;state&quot;. Only muted is supported</td>
+			</tr>
+			<tr>
+				<td>autoplay</td>
+				<td>autoplay</td>
+				<td>Plays the video automatically</td>
+			</tr>
+			<tr>
+				<td>controls</td>
+				<td>controls</td>
+				<td>Displays controls: play, pause</td>
+			</tr>
+			<tr>
+				<td>height</td>
+				<td>[pixel value]</td>
+				<td>Sets the height of the video player</td>
+			</tr>
+			<tr>
+				<td>loop</td>
+				<td>loop</td>
+				<td>Plays the video over again after its finished playing</td>
+			</tr>
+			<tr>
+				<td>poster</td>
+				<td>[url]</td>
+				<td>Displays an image in place of the video, until the video is played</td>
+			</tr>
+			<tr>
+				<td>preload</td>
+				<td>preload</td>
+				<td>Loads the video at page load, ignored if &quot;autoplay&quot; is present</td>
+			</tr>
+			<tr>
+				<td>src</td>
+				<td>[url]</td>
+				<td>Sets url of the video to play</td>
+			</tr>
+			<tr>
+				<td>width</td>
+				<td>[pixel value]</td>
+				<td>Sets the width of the video player</td>
+			</tr>
+		</table>
+	
+		<h2>Checking for Browser Support</h2>
+		<p>To check for browser support of  <code>&lt;video&gt;</code> and  <code>&lt;audio&gt;</code> elements you can use JavaScript to:</p>
+		<p> Dynamically create the <code>&lt;video&gt;</code> and <code>&lt;audio&gt;</code> elements.</p>
+		<p>Check for the existence of a method on the element.</p>
+		<p>If the method doesn't exist the browser does not support the element.</p>
+		<p> var hasVideo = (document.createElement('video').canPlayType);</p>
+	</body>
+</html>
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dialog - Demo</title>
+    <style>
+        dialog {
+            width: 400px;
+            font-family: "Arial", sans-serif;
+        }
+        dialog>div>* {
+            padding: .25em;
+        }
+        dialog>label {
+            font-family:"Arial", sans-serif;
+            font-size: 1.2em;
+        }
+        dialog>input {
+            display: block;
+            height: 1.75em;
+        }
+    </style>
+    <link rel="stylesheet" href="dialog.css">
+</head>
+<body>
+
+<div>
+    <button id="dialogBtn">Open Dialog</button>
+    <p>After the page opens, <em>but before clicking the "Open Dialog" button:</em></p>
+    <ol>
+        <li>Move the slider bar below.</li>
+        <li>Click the "Open Dialog" button.</li>
+        <li>Move the slider bar below.</li>
+        <li>Close the dialog box.</li>
+        <li>Move the slider bar below.</li>
+    </ol>
+    <p>The dialog box is a modal dialog box, which means the user must interact with the dialog box before it can continue interacting with the application. The modal box prevents any interactions from occuring on the current page that spawned the modal box.</p>
+</div>
+<div style="width: 200px">
+    <input type="range" min="0" max="10">
+</div>
+<dialog id="dialogBox">
+    <h1>Heading</h1>
+    <div>
+        <p>Contents of the dialog box.</p>
+        <input type="button" value="Close Dialog Box" id="closeDialog">
+    </div>
+</dialog>
+
+
+<script>
+    const dialogBox = document.getElementById('dialogBox');
+    const closeDialog = document.getElementById('closeDialog');
+    const dialogBtn = document.getElementById('dialogBtn');
+    closeDialog.addEventListener('click', function() {dialogBox.close()});
+    dialogBtn.addEventListener('click', showDialogBox);
+    function showDialogBox () {
+        dialogBox.showModal();
+    }
+</script>
+</body>
+
+</html>

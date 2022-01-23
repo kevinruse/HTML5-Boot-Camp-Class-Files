@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HTML Picture Element - finished</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+<picture>
+	<source media="(min-width: 480px) and (max-width: 640px)" srcset="images/plate-144.jpg">
+	<source media="(min-width: 641px)" srcset="images/640-size-image.jpg">
+	<source media="monochrome" srcset="images/640-monochrome.jpg">
+	<source media="print" srcset="images/640-monochrome.jpg">
+	<!-- fallback img if picture is not supported -->
+	<img src="images/480-size-image.jpg" alt="Silver Falls State Park, Salem, Oregon">
+	<!-- fallback text -->
+	<p>Silver Falls State Park &#8212; Salem, Oregon</p>
+</picture>
+
+</body>
+</html>

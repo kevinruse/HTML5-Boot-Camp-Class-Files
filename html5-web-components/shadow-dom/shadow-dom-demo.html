@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Shadow DOM with Template Element</title>
+	<style>
+		h1 {
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			color: #f00;
+		}
+
+		#shadowHost {
+			position: relative;
+			top: 1em;
+			left: 1em;
+		}
+
+		#shadowHost2 {
+			position: absolute;
+			left: 350px;
+			top: 7.2em;
+		}
+	</style>
+</head>
+<body>
+<h1>I'm a document element: h1</h1>
+<button id="shadowDomElement">Show Shadow DOM Element</button>
+<button id="shadowDomElement2">Show Shadow DOM 2 Element</button>
+<div id="shadowHost2"></div>
+<div id="shadowHost">
+	<template id="tmpl">
+		<style>
+			h1 {
+				color: #00f;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.3em;
+			}
+
+			:host {
+				background-color: #c8def4;
+				border: 1px solid #000;
+				padding: 1em;
+				width: 200px;
+				margin: 1em;
+			}
+		</style>
+		<div>
+			<img src="spy.png" alt="binoculars">
+			<h1>This is a shadow DOM element.</h1>
+		</div>
+	</template>
+	<template id="tmpl2">
+		<style>
+			h1 {
+				color: #0f0;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.3em;
+			}
+
+			:host {
+				background-color: yellow;
+				border: 1px solid #000;
+				padding: 1em;
+				width: 200px;
+				margin: 1em;
+			}
+		</style>
+		<h1>This is a second shadow DOM element.</h1>
+	</template>
+</div>
+
+
+<script>
+	document.querySelector('#shadowDomElement').addEventListener('click', showShadowDomElement);
+
+	function showShadowDomElement() {
+		let host = document.querySelector('#shadowHost');
+		let shadowRoot = host.attachShadow({mode: 'open'});
+		shadowRoot.appendChild(document.querySelector('#tmpl').content);
+		document.querySelector('#shadowDomElement').removeEventListener('click', showShadowDomElement);
+	}
+
+	document.querySelector('#shadowDomElement2').addEventListener('click', showShadowDomElement2);
+
+	function showShadowDomElement2() {
+		let host = document.querySelector('#shadowHost2');
+		let shadowRoot = host.attachShadow({mode: 'open'});
+		shadowRoot.appendChild(document.querySelector('#tmpl2').content);
+		document.querySelector('#shadowDomElement2').removeEventListener('click', showShadowDomElement2);
+
+	}
+</script>
+</body>
+</html>

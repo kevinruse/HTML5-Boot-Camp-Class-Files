@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Picture element with sizes - finished</title>
+
+</head>
+<body>
+<picture>
+    <source media="(min-width: 1000px)"
+            srcset="images/yosemite-x-large.jpg  1000w,
+                    images/yosemite-large.jpg  800w,
+                    images/yosemite-medium.jpg 400w,
+                    images/yosemite-small.jpg  320w"
+            sizes="20vw" />
+    <source srcset="images/yosemite-cropped-96.jpg 1x,
+                    images/yosemite-cropped-144.jpg 2x" />
+    <img src="images/yosemite-small.jpg" alt="Yosemite image"/>
+</picture>
+</body>
+</html>

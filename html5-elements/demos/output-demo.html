@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>output_finished</title>
+    
+    </head>
+    
+    <body>
+        <h1>HTML 5 &lt;output&gt; Element</h1>
+        <p><em>Used to show the result of a calculation.</em></p>
+        <p>8 + 5 = <output id="answer"></output></p>
+        
+        <script>
+			let num1 = 8;
+			let num2 = 5;
+			let result = (num1 + num2).toString();
+			document.getElementById('answer').innerHTML = result;
+        </script>
+<h2>Using the optional "for" attribute for better accessibility and semantics</h2>
+        <form id="addForm">
+            <input type="number" id="num3" value="0">
+            <input type="number" id="num4" value="0">
+            <span>Result: </span><output id="addOperation" for="num3 num4">0</output>
+        </form>
+
+        <script>
+            const addForm = document.querySelector('#addForm');
+            const output = document.querySelector('#addOperation');
+                addForm.addEventListener('input', function () {
+                    addOperation.value = parseFloat(num3.value) + parseFloat(num4.value);
+                }, false);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>figure-finished</title>
+    <link href="css/figure.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="container">
+    <h1>The HTML5 figure element</h1>
+    <p>The &lt;figure&gt; tag specifies self-contained flow content (like images, diagrams, photos, code, etc).</p>
+    <p>The content of the figure element should be relevant to the main content, but if removed it should not affect the flow of the document.</p>
+    <h2>Table of Figures</h2>
+    <ul>
+        <li><a href="#1">Figure 1</a></li>
+        <li><a href="#2">Figure 2</a></li>
+        <li><a href="#3">Figure 3</a></li>
+        <li><a href="#4">Figure 4</a></li>
+    </ul>
+    <figure id="1">
+        <h3 class="footnote" data-link="https://en.wikipedia.org/wiki/GIF">The GIF </h3>
+        <figcaption>A Sample File in the Graphical Interchange Format (GIF)</figcaption>
+        <img src="images/SampleGif.gif"/>
+    </figure>
+
+    <p>from wikipedia:</p>
+    <p>The Graphics Interchange Format (better known by its acronym GIF /ˈɡɪf/ ghif or /ˈdʒɪf/ gif) is a bitmap image format that was developed by US-based software writer Steve Wilhite while working at the internet service provider CompuServe in 1987[1] and has since come into widespread usage on the World Wide Web due to its wide support and portability.</p>
+
+    <p>     The format supports up to 8 bits per pixel for each image, allowing a single image to reference its own palette of up to 256 different colors chosen from the 24-bit RGB color space. It also supports animations and allows a separate palette of up to 256 colors for each frame. These palette limitations make the GIF format less suitable for reproducing color photographs and other images with continuous color, but it is well-suited for simpler images such as graphics or logos with solid areas of color.</p>
+
+    <p> GIF images are compressed using the Lempel–Ziv–Welch (LZW) lossless data compression technique to reduce the file size without degrading the visual quality. This compression technique was patented in 1985. Controversy over the licensing agreement between the software patent holder, Unisys, and CompuServe in 1994 spurred the development of the Portable Network Graphics (PNG) standard. By 2004 all the relevant patents had expired.</p>
+    <figure id="2">
+        <h3 class="footnote">The PNG</h3>
+        <figcaption>A Sample File in the Portable Network Graphic Format (PNG)</figcaption>
+        <img src="images/favicon.png"/>
+    </figure>
+    <p>from wikipedia:</p>
+    <p>Portable Network Graphics (PNG) was designed as a replacement for the GIF format in order to avoid infringement of Unisys' patent on the LZW compression technique. PNG offers better compression and more features than GIF, animation being the only significant exception. PNG is more suitable than GIF in instances where true-color imaging and alpha transparency are required.
+    </p>
+    <p> Although support for PNG format came slowly, new web browsers generally support PNG. Older versions of Internet Explorer do not support all features of PNG. Versions 6 and earlier do not support alpha channel transparency without using Microsoft-specific HTML extensions. Gamma correction of PNG images was not supported before version 8, and the display of these images in earlier versions may have the wrong tint.</p>
+
+    <p> PNG files can be much larger than GIF files in situations where a GIF and a PNG file were created from the same high-quality image source, as PNG is capable of storing more color depth and transparency information than GIF. However, for identical 8-bit (or lower) image data, PNG files are typically smaller than the equivalent GIFs, due to the more efficient compression techniques used in PNG encoding. Complete support for the GIF format is complicated chiefly by the complex canvas structure it allows, though this is what enables the compact animation features.</p>
+
+    <figure id="3">
+        <h3 class="footnote">The img element</h3>
+        <figcaption>THe HTML img element</figcaption>
+        <code>An img element represents an image and its fallback content.
+            The image given by the src and srcset attributes, and any previous sibling source elements' srcset attributes if the parent is a picture element, is the embedded content; the value of the alt attribute and the content referred to by the longdesc attribute are the img element’s fallback content, and provide equivalent content for users and user agents who cannot process images or have image loading disabled.
+        </code>
+    </figure>
+    <p>from https://www.w3.org/MarkUp/html3/img.html</p>
+    <p>The &lt;img&gt; tag is used to incorporate in-line graphics (typically icons or small graphics) into an HTML document. This element is NOT intended for embedding other HTML text. For large figures with captions and text flow see FIG element.</p>
+
+        <p>Example:</p>
+
+        <code>&lt;img src="tajmahal.gif" alt="The Taj Mahal"&gt;</code>
+        <p>Browsers that cannot display in-line images ignore the IMG element unless it contains the ALT attribute. Note that some browsers can display (or print) linked graphics but not in-line graphics. If the graphic is essential, you may want to create a link to it rather than to put it in-line. If the graphic is essentially decorative, then IMG is appropriate.</p>
+    <h3>The picture element</h3>
+    <p>The HTML picture element is a container used to specify multiple source elements for a specific img contained in it. The browser will choose the most suitable source according to the current layout of the page (the constraints of the box the image will appear in) and the device it will be displayed on (e.g. a normal or hiDPI device.)</p>
+    <p>from https://www.w3.org/TR/html52/semantics-embedded-content.html#the-picture-element</p>
+    <p>The picture element is a container which provides multiples sources to its contained img element to allow authors to declaratively control or give hints to the user agent about which image resource to use, based on the screen pixel density, viewport size, image format, and other factors. It represents its children.</p>
+
+    <figure id="4">
+        <h3 class="footnote">The picture element attributes</h3>
+        <figcaption>THe HTML picture element attributes</figcaption>
+        <table>
+            <tr>
+                <th>attribute</th>
+                <th>definition</th>
+            </tr>
+            <tr>
+            <td>srcset</td>
+            <td>Images to use in different situations (e.g., high-resolution displays, small monitors, etc)</td>
+        </tr>
+            <tr>
+                <td>sizes</td>
+                <td>Image sizes between breakpoints</td>
+            </tr>
+            <tr>
+                <td>media</td>
+                <td>Applicable media</td>
+            </tr>
+            <tr>
+                <td>type</td>
+                <td>Type of embedded resource</td>
+            </tr>
+        </table>
+    </figure>
+
+</div>
+</body>
+</html>

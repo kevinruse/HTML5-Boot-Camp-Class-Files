@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>ins-del - finished</title>
+    <style>
+        .tooltip{
+            display: inline;
+            position: relative;
+        }
+        .tooltip:hover:after{
+            background: rgba(0,0,0,.75);
+            border-radius: 3px;
+            bottom: 20px;
+            color: #fff;
+            width: 290px;
+            left: 15%;
+            padding: 3px 15px;
+            position: absolute;
+            z-index: 100;
+            content: "Cited from: " attr(cite);
+        }
+    </style>
+</head>
+<body>
+<h1>HTML 5 &lt;ins&gt; Element</h1>
+<p>Typically used by HTML authoring tools, content management systems, automated publishing systems, etc. designed to track when content is edited, inserted or deleted.</p>
+<pre>Sample Content:</pre>
+<h1>Quote from the CEO</h1>
+<p>In a recent speech <ins class="tooltip" datetime=”2012-01-15T09:45:15” cite="http:foodPlate.com/stockholdersMeeting.html">given on January 4, 2012</ins>, the CEO of FoodPlate Inc. announced a revenue increase for the previous year in the amount of 12%.</p>
+
+<p>Also announced was a 2012 dividend increase of <del>5%</del> 8%.</p>
+</body>
+</html>
+
+
+

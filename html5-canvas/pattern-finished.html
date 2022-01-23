@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Pattern - finished</title>
+		<style>
+			#myCanvas {
+				border: 1px solid #9C9898;
+			}
+		</style>
+		<script>         
+			window.onload = function () {
+				const canvas = document.getElementById("myCanvas");
+				let context = canvas.getContext("2d");
+				let imageObj = new Image();
+				imageObj.onload = function () {
+					let pattern = context.createPattern(imageObj, "repeat-x");
+					context.rect(10, 10, canvas.width - 20, canvas.height - 20);
+					context.fillStyle = pattern;
+					context.fill();                   
+				};
+				imageObj.src = "images/samplePNG.png";
+			};
+		</script>
+	</head>
+	<body>
+		<canvas id="myCanvas" width="1024" height="200"> </canvas>
+	</body>
+</html>

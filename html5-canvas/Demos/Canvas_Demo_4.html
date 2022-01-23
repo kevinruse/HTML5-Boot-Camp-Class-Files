@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" >
+    <title>A Canvas with Text Demo</title>   
+<style>
+canvas {
+		border: 1px dashed #666666;
+}
+</style>
+<script>
+function drawShape(){
+    let canvas = document.getElementById('myCanvas');
+  if (canvas.getContext){
+      let ctx = canvas.getContext('2d');
+    ctx.fillStyle = '#ff0000';
+    ctx.font = 'Italic 30px Sans-Serif';
+    ctx.textBaseline = 'Top';
+	ctx.textAlign = 'right';
+    ctx.fillText ('This is Canvas Text!', 400, 50);
+    ctx.font = 'Bold 30px Sans-Serif';
+	ctx.textAlign = 'center';
+    ctx.strokeText('This', 0, 100); 
+  
+  } else {
+    alert('You need Safari or Firefox 1.5+ to see this demo.');
+  }
+}
+</script>
+</head>
+<body onload="drawShape();">
+   <canvas id="myCanvas" width="800" height="100"></canvas>
+</body>
+</html>

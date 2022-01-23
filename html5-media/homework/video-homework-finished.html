@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video Homework - starter</title>
+    <style>
+        video {
+            position: absolute;
+            left: 100px;
+            top:252px;
+            width: 1115px;
+        }
+        img {
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            width: 1230px;
+        }
+    </style>
+</head>
+<body>
+<video src="close-thoroughbred_H264HD1080.mov" poster="poster.gif"></video>
+<img src="tv-transparent.png">
+<script>
+    let image = document.querySelector('img');
+    let video = document.querySelector('video');
+    image.addEventListener('click', playVideo);
+    function playVideo() {
+        video.play();
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>control video play-pause - finished</title>
+<script src="scripts/jquery_1_6_1.js"></script>
+<script src="scripts/videoPlay-pause-finished.js"></script>
+</head>
+<body>
+<h1>Controlling Video </h1>
+  <video id="demo" src="media/FoodPlate.ogg">
+    <p>Your browser does NOT support HTML5 Video</p>
+  </video>
+  		<input name="play-pause_btn" id="play-pause_btn" type="button" value="Play" />
+		<label for="volumeControl">Volume:</label>
+  		<input type="range" id="volumeControl" name="volumeControl" 
+  		 min="0" max="1" step="0.1" value="1" />
+		<label for="seekbar">Seekbar:</label>
+  		<input type="range" id="seekbar" name="seekbar" 
+  		 step="any" value="1" />
+</body>
+</html>

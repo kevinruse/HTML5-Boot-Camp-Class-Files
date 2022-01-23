@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Animated Progress Bar</title>
+    <style>
+        progress {
+            width: 400px;
+            height: 30px;
+            border: 2px solid blue;
+            border-radius: .45em;
+            filter: drop-shadow(5px 5px 3px #191919);
+        }
+
+        ::-webkit-progress-value {
+            background-color: #fff;
+            color: green;
+            transition: width 3s;
+        }
+
+        ::-webkit-progress-value {
+            background-color: green;
+        }
+        ::-moz-progress-bar {
+            background-color: green;
+        }
+        ::-ms-fill {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<h1>HTML 5 &lt;progress&gt; Element</h1>
+<p>This element presents a graphical representation of a tasks completion progress.</p>
+<progress id="downloadProgress" max="100" value="0"> </progress>
+<p>Status: <span id="status"></span></p>
+<script>
+    let xhr = new XMLHttpRequest();
+    let progressXHR = document.getElementById ('downloadProgress');
+    progressXHR.min = 0;
+    progressXHR.max = 100;
+    let xhrlocation = "https://www.kevinruse.com/resources/messages.xml";
+    xhr.open('GET', xhrlocation, true);
+    xhr.onerror = function() {
+        document.getElementById('status').innerHTML = xhr.statusText;
+    };
+    xhr.onprogress = function(evt) {
+        if (evt.lengthComputable) {
+            progressXHR.value = (evt.loaded / evt.total) * 100;
+            document.getElementById('status').innerHTML = " loading...";
+        }
+    };
+    xhr.onloadend = function() {
+        document.getElementById('status').innerHTML = xhr.statusText;
+    };
+    xhr.send(null);
+</script>
+
+</body>
+</html>

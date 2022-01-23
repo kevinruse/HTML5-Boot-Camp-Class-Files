@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>contentEditable</title>
+</head>
+<body>
+<h1>This is not editable.</h1>
+<!-- make this h1 editable -->
+<h1 contenteditable="true">This is editable.</h1>
+<div id="parentDiv" contenteditable="true">
+    <p>Content in the parent div.</p>
+    <div id="childDiv">
+        <p>Content in the child div.</p>
+    </div>
+</div>
+
+<script>
+    console.log(document.querySelector('#childDiv').isContentEditable);
+</script>
+</body>
+</html>
+

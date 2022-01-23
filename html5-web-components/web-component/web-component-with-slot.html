@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Web Component with slot</title>
+	<script type="module">
+		import {FoodGroup} from './FoodGroup.js';
+	</script>
+	<style>
+		h1 {
+			color: green;
+		}
+
+	</style>
+</head>
+<body>
+<h1>Web component with slot - demo</h1>
+
+<button id="fruitBtn">Fruit</button>
+
+
+<fp-foodgroup id="fruit" hidden="true">
+	<style>
+		table {
+			border-collapse: collapse;
+			border: 1px solid red;
+		}
+
+		td, th {
+			border: 1px solid #999;
+			padding: 0.5rem;
+			border-collapse: collapse;
+			text-align: left;
+		}
+	</style>
+	<span slot="heading">Food Group: Fruit</span>
+	<span slot="body">Any fruit or 100% fruit juice counts as part of the Fruit Group. Fruits may be fresh, canned, frozen, or dried, and may be whole, cut-up, or pureed.</span>
+	<section slot="tableData">
+		<h5>Fruit Data</h5>
+		<table>
+			<tr>
+				<th>Fruit</th>
+				<th>Counts as 1 cup</th>
+				<th>Counts as 1/2 cup</th>
+			</tr>
+			<tr>
+				<td>Apple</td>
+				<td>1/2 large (3 1/4" diameter)</td>
+				<td>1/2 cup sliced or chopped</td>
+			</tr>
+			<tr>
+				<td>Banana</td>
+				<td>1 cup, sliced</td>
+				<td>1 small (less than 6" long)</td>
+			</tr>
+		</table>
+	</section>
+</fp-foodgroup>
+
+<fp-foodgroup>
+	<span slot="heading">Food Group: Vegetables</span>
+	<span slot="body">Any vegetable or 100% vegetable juice counts as a member of the Vegetable Group. Vegetables may be raw or cooked; fresh, frozen, canned, or dried/dehydrated; and may be whole, cut-up, or mashed.</span>
+	<section slot="tableData">
+		<table>
+			<tr>
+				<th>Vegetable</th>
+				<th>Counts as 1 cup</th>
+				<th>Counts as 1/2 cup</th>
+			</tr>
+			<tr>
+				<td>Broccoli</td>
+				<td>1 cup chopped or florets</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Spinach</td>
+				<td>2 cups, raw</td>
+				<td>1 cup raw</td>
+			</tr>
+		</table>
+	</section>
+</fp-foodgroup>
+
+
+<script>
+	fgBtn = document.querySelector('#fruitBtn');
+	fgBtn.addEventListener('click', function () {
+		document.getElementById('fruit').hidden = false;
+	});
+</script>
+
+</body>
+</html>

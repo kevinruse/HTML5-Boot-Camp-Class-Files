@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Adding Images - finished</title>
+</head>
+<body>
+<h1>Adding Images</h1>
+<h2>HTML Techniques</h2>
+<h3>The img element</h3>
+<img src="images/red-and-green-apples-1402659.jpg" alt="Red and green apples">
+
+<h3>The picture element</h3>
+<picture>
+	<source media="(min-width: 480px) and (max-width: 640px)" srcset="images/plate-144.jpg">
+	<source media="(min-width: 641px)" srcset="images/640-size-image.jpg">
+	<source media="monochrome" srcset="images/640-monochrome.jpg">
+	<source media="print" srcset="images/640-monochrome.jpg">
+	<!-- fallback img if picture is not supported -->
+	<img src="images/480-size-image.jpg" alt="Silver Falls State Park, Salem, Oregon">
+	<!-- fallback text -->
+	<p>Silver Falls State Park &#8212; Salem, Oregon</p>
+</picture>
+
+<h3>The img element with an image/svg+xml encoded SVG src attribute</h3>
+<img src="data:image/svg+xml,%3Csvg width='640' height='480' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'%3E%3C!-- Created with SVG-edit - http://svg-edit.googlecode.com/ --%3E%3Cg%3E%3Ctitle%3ELayer 1%3C/title%3E%3Crect stroke-width='2' stroke='%23000000' fill='%23FF0000' id='svg_1' height='187' width='88' y='197' x='280.5'/%3E%3Ccircle stroke-dasharray='null' stroke-width='2' stroke='%23000000' fill='%23ffff00' id='svg_3' r='48.27007' cy='126' cx='320.5'/%3E%3Ctext xml:space='preserve' text-anchor='middle' font-family='serif' font-size='24' stroke-dasharray='null' stroke-width='0' stroke='%23000000' fill='%23000000' id='svg_4' y='425' x='331.5'%3ESample Text%3C/text%3E%3C/g%3E%3C/svg%3E%0A"
+>
+<h3>The img element with .svg src attribute</h3>
+<img src="images/safari.svg" height="60"/>
+
+<h3>The img element with src base-64 (converted from svg)</h3>
+<img src="data:image/png;base64,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"/>
+
+
+</body>
+</html>
